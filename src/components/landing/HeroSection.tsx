@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
               <Button 
                 variant="outline" 
                 onClick={() => navigate('/login')}
-                className="w-full sm:w-auto text-lg py-6 px-8 text-white border-white hover:bg-white/10 transition-all"
+                className="w-full sm:w-auto text-lg py-6 px-8 text-white border-white bg-white/10 hover:bg-white/20 transition-all"
               >
                 Sign In
               </Button>
@@ -46,14 +46,17 @@ const HeroSection: React.FC = () => {
           <div className="w-full max-w-lg">
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-5 border border-white/20 shadow-xl">
               <div className="aspect-square w-full flex items-center justify-center overflow-hidden">
-                <lottie-player
-                  src="https://assets3.lottiefiles.com/packages/lf20_khzniaya.json"
-                  background="transparent"
-                  speed="1"
-                  loop
-                  autoplay
-                  style={{ width: '100%', height: '100%' }}
-                ></lottie-player>
+                {/* Use the Vibe Coding animation image instead of the lottie animation */}
+                <div className="relative w-full h-full">
+                  <img 
+                    src="/lovable-uploads/f1378e1a-5454-4b72-af65-845c55c28976.png" 
+                    alt="Vibe Coding - Person giving prompt on laptop and getting a website output" 
+                    className="w-full h-full object-contain"
+                  />
+                  <div className="absolute bottom-4 left-4 text-white text-xl font-bold">
+                    Vibe Coding
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ interface WaitlistStatsProps {
 const WaitlistStats: React.FC<WaitlistStatsProps> = ({ userCount }) => {
   return (
     <div className="text-center mt-12">
-      <p className="text-xl mb-6">
+      <p className="text-xl mb-6 text-white">
         Current waitlist: <span className="font-bold">{userCount.toLocaleString()} users</span>
       </p>
       

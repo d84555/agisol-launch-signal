@@ -28,7 +28,11 @@ const Header: React.FC = () => {
                 )}
                 
                 {location.pathname !== '/login' && (
-                  <Button variant="outline" className="text-white border-white hover:bg-white/10" asChild>
+                  <Button 
+                    variant="outline" 
+                    className="text-white border-white bg-white/10 hover:bg-white/20" 
+                    asChild
+                  >
                     <Link to="/login">Sign In</Link>
                   </Button>
                 )}

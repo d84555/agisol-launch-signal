@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { NotificationService, SMTPConfig, UserStore } from '@/services/NotificationService';
 import { useToast } from '@/hooks/use-toast';
+import AdminAuth from '@/components/admin/AdminAuth';
 
 const AdminPage: React.FC = () => {
   const [host, setHost] = useState('');
@@ -16,22 +17,29 @@ const AdminPage: React.FC = () => {
   const [encryption, setEncryption] = useState<'none' | 'tls' | 'ssl'>('tls');
   const [loading, setLoading] = useState(false);
   const [userEmails, setUserEmails] = useState<string[]>([]);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const { toast } = useToast();
   
   useEffect(() => {
-    // Load existing config if available
-    const config = NotificationService.getSmtpConfig();
-    if (config) {
-      setHost(config.host);
-      setPort(config.port.toString());
-      setUsername(config.username);
-      setPassword(config.password);
-      setEncryption(config.encryption);
-    }
+    // Check if admin is already authenticated from session storage
+    const adminAuthed = sessionStorage.getItem('adminAuthed') === 'true';
+    setIsAuthenticated(adminAuthed);
     
-    // Load user emails
-    setUserEmails(UserStore.getUserEmails());
-  }, []);
+    if (adminAuthed) {
+      // Load existing config if available
+      const config = NotificationService.getSmtpConfig();
+      if (config) {
+        setHost(config.host);
+        setPort(config.port.toString());
+        setUsername(config.username);
+        setPassword(config.password);
+        setEncryption(config.encryption);
+      }
+      
+      // Load user emails
+      setUserEmails(UserStore.getUserEmails());
+    }
+  }, [isAuthenticated]);
   
   const handleSaveConfig = () => {
     setLoading(true);
@@ -61,6 +69,21 @@ const AdminPage: React.FC = () => {
       setLoading(false);
     }
   };
+
+  const handleAuthentication = () => {
+    setIsAuthenticated(true);
+  };
+  
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow pt-24 pb-12 px-4">
+          <AdminAuth onAuth={handleAuthentication} />
+        </main>
+      </div>
+    );
+  }
   
   return (
     <div className="min-h-screen flex flex-col">

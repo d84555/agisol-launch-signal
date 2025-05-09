@@ -9,39 +9,39 @@ const Header: React.FC = () => {
   const { user, logout } = useAuth();
   
   return (
-    <header className="py-4 px-6 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm">
+    <header className="py-4 px-6 bg-white/10 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="font-bold text-xl text-gray-900">agisol.ai</span>
+              <span className="font-bold text-xl text-white">agisol.ai</span>
             </Link>
           </div>
           
           <div>
             {!user ? (
               <div className="flex gap-4">
-                {location.pathname !== '/login' && (
-                  <Button variant="outline" className="text-gray-900 border-gray-300 hover:bg-gray-100" asChild>
-                    <Link to="/login">Sign In</Link>
+                {location.pathname !== '/signup' && (
+                  <Button className="bg-brand-purple hover:bg-brand-purple/90" asChild>
+                    <Link to="/signup">Sign Up</Link>
                   </Button>
                 )}
                 
-                {location.pathname !== '/signup' && (
-                  <Button asChild>
-                    <Link to="/signup">Sign Up</Link>
+                {location.pathname !== '/login' && (
+                  <Button variant="outline" className="text-white border-white hover:bg-white/10" asChild>
+                    <Link to="/login">Sign In</Link>
                   </Button>
                 )}
               </div>
             ) : (
               <div className="flex items-center gap-4">
                 {location.pathname !== '/dashboard' && (
-                  <Button variant="outline" className="text-gray-900 border-gray-300" asChild>
+                  <Button variant="outline" className="text-white border-white hover:bg-white/10" asChild>
                     <Link to="/dashboard">Dashboard</Link>
                   </Button>
                 )}
                 
-                <Button variant="ghost" onClick={logout}>
+                <Button variant="ghost" onClick={logout} className="text-white hover:bg-white/10">
                   Sign Out
                 </Button>
               </div>

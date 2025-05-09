@@ -46,10 +46,10 @@ const HeroSection: React.FC = () => {
           <div className="w-full max-w-lg">
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-5 border border-white/20 shadow-xl">
               <div className="aspect-square w-full flex items-center justify-center overflow-hidden">
-                {/* Use the Vibe Coding animation image instead of the lottie animation */}
+                {/* Updated Vibe Coding image */}
                 <div className="relative w-full h-full">
                   <img 
-                    src="/lovable-uploads/f1378e1a-5454-4b72-af65-845c55c28976.png" 
+                    src="/lovable-uploads/10ce818f-38ee-498c-a432-72866245b82a.png" 
                     alt="Vibe Coding - Person giving prompt on laptop and getting a website output" 
                     className="w-full h-full object-contain"
                   />

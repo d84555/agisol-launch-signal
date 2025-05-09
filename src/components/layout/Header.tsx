@@ -22,7 +22,7 @@ const Header: React.FC = () => {
             {!user ? (
               <div className="flex gap-4">
                 {location.pathname !== '/login' && (
-                  <Button variant="outline" asChild>
+                  <Button variant="outline" className="text-gray-900 border-gray-300 hover:bg-gray-100" asChild>
                     <Link to="/login">Sign In</Link>
                   </Button>
                 )}
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             ) : (
               <div className="flex items-center gap-4">
                 {location.pathname !== '/dashboard' && (
-                  <Button variant="outline" asChild>
+                  <Button variant="outline" className="text-gray-900 border-gray-300" asChild>
                     <Link to="/dashboard">Dashboard</Link>
                   </Button>
                 )}

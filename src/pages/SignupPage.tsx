@@ -4,7 +4,6 @@ import Header from '@/components/layout/Header';
 import AuthForm from '@/components/auth/AuthForm';
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
-import { NotificationService, UserStore } from '@/services/NotificationService';
 
 const SignupPage: React.FC = () => {
   const { signup } = useAuth();
@@ -13,21 +12,7 @@ const SignupPage: React.FC = () => {
   const handleSignup = async (data: { email: string; password: string; name?: string }) => {
     try {
       if (!data.name) return;
-      
-      // Save user email to storage
-      UserStore.saveUserEmail(data.email);
-      
-      // Attempt to send notification email
-      NotificationService.sendSignupNotification(data.email)
-        .then(success => {
-          if (!success) {
-            console.warn('Email notification could not be sent. SMTP may not be configured.');
-          }
-        });
-      
-      // Complete the signup process
       await signup(data.name, data.email, data.password);
-      
       toast({
         title: "Account created!",
         description: "Welcome to agisol.ai! Your account has been created successfully."

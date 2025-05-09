@@ -13,6 +13,21 @@ const WaitlistTeaser: React.FC = () => {
             We're carefully scaling our platform to ensure the best experience for every developer.
             Join our waitlist today to be among the first to experience agisol.ai.
           </p>
+          
+          <div className="relative w-full max-w-md mx-auto h-36 mb-8">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-32 h-32 rounded-full bg-brand-gradient animate-pulse opacity-50"></div>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-24 h-24 rounded-full bg-white shadow-lg flex items-center justify-center">
+                <span className="font-mono font-bold text-2xl text-brand-purple">#01</span>
+              </div>
+            </div>
+          </div>
+          
+          <p className="text-gray-500 text-sm">
+            Your position is determined by sign-up order and referral points
+          </p>
         </div>
       </div>
     </section>

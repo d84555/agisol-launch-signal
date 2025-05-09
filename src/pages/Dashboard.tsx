@@ -9,11 +9,11 @@ import { Navigate } from 'react-router-dom';
 const Dashboard: React.FC = () => {
   const { user, loading } = useAuth();
   
-  // Set launch date to June 1st, 2025 at 12:00 PM PT
-  const launchDate = new Date('2025-06-01T12:00:00-07:00');
+  // Set launch date to May 20, 2025, 5:00 PM PT
+  const launchDate = new Date('2025-05-20T17:00:00-07:00');
   
-  // Updated waitlist count
-  const waitlistCount = 300;
+  // Mock waitlist count
+  const waitlistCount = 11194;
   
   if (loading) {
     return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
@@ -32,7 +32,7 @@ const Dashboard: React.FC = () => {
             <div className="text-center mb-8">
               <h1 className="text-3xl font-bold mb-2">Welcome to agisol.ai</h1>
               <p className="text-xl text-gray-600">
-                We're launching on June 1st, 2025 at 12:00 PM PT
+                We're launching on May 20th, 2025 at 5:00 PM PT
               </p>
             </div>
             

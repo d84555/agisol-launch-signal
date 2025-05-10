@@ -8,7 +8,7 @@ import Footer from '@/components/landing/Footer';
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#1A1F2C]">
       <Header />
       <main className="flex-grow pt-16">
         <HeroSection />

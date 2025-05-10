@@ -37,7 +37,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ type, onSubmit }) => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {type === 'signup' && (
           <div className="space-y-2">
-            <Label htmlFor="name" className="text-white">Name</Label>
+            <Label htmlFor="name">Name</Label>
             <Input
               id="name"
               placeholder="Your name"
@@ -45,13 +45,12 @@ const AuthForm: React.FC<AuthFormProps> = ({ type, onSubmit }) => {
               onChange={(e) => setName(e.target.value)}
               required
               autoComplete="name"
-              className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
             />
           </div>
         )}
         
         <div className="space-y-2">
-          <Label htmlFor="email" className="text-white">Email</Label>
+          <Label htmlFor="email">Email</Label>
           <Input
             id="email"
             type="email"
@@ -60,12 +59,11 @@ const AuthForm: React.FC<AuthFormProps> = ({ type, onSubmit }) => {
             onChange={(e) => setEmail(e.target.value)}
             required
             autoComplete="email"
-            className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
           />
         </div>
         
         <div className="space-y-2">
-          <Label htmlFor="password" className="text-white">Password</Label>
+          <Label htmlFor="password">Password</Label>
           <Input
             id="password"
             type="password"
@@ -74,7 +72,6 @@ const AuthForm: React.FC<AuthFormProps> = ({ type, onSubmit }) => {
             onChange={(e) => setPassword(e.target.value)}
             required
             autoComplete={type === 'signup' ? 'new-password' : 'current-password'}
-            className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
           />
         </div>
         
@@ -86,7 +83,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ type, onSubmit }) => {
           {loading ? 'Please wait...' : type === 'login' ? 'Sign In' : 'Sign Up'}
         </Button>
         
-        <div className="text-center text-sm text-white/80">
+        <div className="text-center text-sm">
           {type === 'login' ? (
             <p>
               Don't have an account?{' '}

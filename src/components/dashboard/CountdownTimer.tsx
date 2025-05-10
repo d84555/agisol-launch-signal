@@ -51,22 +51,22 @@ const CountdownTimer: React.FC<CountdownProps> = ({ targetDate }) => {
   return (
     <div className="text-center">
       <div className="flex justify-center items-center gap-4">
-        <div className="flex flex-col items-center justify-center w-24 h-24 bg-[#131722] rounded-md text-white border border-white/10">
+        <div className="flex flex-col items-center justify-center w-24 h-24 bg-gray-900 rounded-md text-white">
           <span className="text-4xl font-mono font-bold">{formatNumber(timeLeft.days)}</span>
           <span className="text-xs uppercase tracking-wider mt-1">Days</span>
         </div>
         
-        <div className="flex flex-col items-center justify-center w-24 h-24 bg-[#131722] rounded-md text-white border border-white/10">
+        <div className="flex flex-col items-center justify-center w-24 h-24 bg-gray-900 rounded-md text-white">
           <span className="text-4xl font-mono font-bold">{formatNumber(timeLeft.hours)}</span>
           <span className="text-xs uppercase tracking-wider mt-1">Hours</span>
         </div>
         
-        <div className="flex flex-col items-center justify-center w-24 h-24 bg-[#131722] rounded-md text-white border border-white/10">
+        <div className="flex flex-col items-center justify-center w-24 h-24 bg-gray-900 rounded-md text-white">
           <span className="text-4xl font-mono font-bold">{formatNumber(timeLeft.minutes)}</span>
           <span className="text-xs uppercase tracking-wider mt-1">Mins</span>
         </div>
         
-        <div className="flex flex-col items-center justify-center w-24 h-24 bg-[#131722] rounded-md text-white border border-white/10">
+        <div className="flex flex-col items-center justify-center w-24 h-24 bg-gray-900 rounded-md text-white">
           <span className="text-4xl font-mono font-bold">{formatNumber(timeLeft.seconds)}</span>
           <span className="text-xs uppercase tracking-wider mt-1">Secs</span>
         </div>

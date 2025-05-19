@@ -15,9 +15,9 @@ const Header: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/7a3543b7-61de-4a1c-a48a-072390745c7d.png" 
+                src="/lovable-uploads/ffcf3e65-6f9f-4053-9235-d5732b161ff0.png" 
                 alt="agisol.ai logo" 
-                className="h-14 md:h-16" // Increased from h-10 to h-14/h-16
+                className="h-14 md:h-16" 
               />
             </Link>
           </div>

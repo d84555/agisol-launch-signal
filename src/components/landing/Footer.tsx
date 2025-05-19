@@ -9,7 +9,11 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
-              <span className="font-bold text-xl text-white">agisol.ai</span>
+              <img 
+                src="/lovable-uploads/7a3543b7-61de-4a1c-a48a-072390745c7d.png" 
+                alt="agisol.ai logo" 
+                className="h-10"
+              />
             </Link>
           </div>
           

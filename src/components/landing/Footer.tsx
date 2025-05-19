@@ -12,16 +12,16 @@ const Footer: React.FC = () => {
               <img 
                 src="/lovable-uploads/7a3543b7-61de-4a1c-a48a-072390745c7d.png" 
                 alt="agisol.ai logo" 
-                className="h-10"
+                className="h-14 md:h-16" // Increased from h-10 to h-14/h-16
               />
             </Link>
           </div>
           
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-6 md:mb-0">
-            <Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link>
-            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Terms</Link>
-            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy</Link>
-            <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">About</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a>
           </nav>
           
           <div className="text-gray-500 text-sm">

@@ -17,7 +17,7 @@ const Header: React.FC = () => {
               <img 
                 src="/lovable-uploads/7a3543b7-61de-4a1c-a48a-072390745c7d.png" 
                 alt="agisol.ai logo" 
-                className="h-10"
+                className="h-14 md:h-16" // Increased from h-10 to h-14/h-16
               />
             </Link>
           </div>
